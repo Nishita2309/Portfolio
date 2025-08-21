@@ -387,5 +387,7 @@ body.dark footer {
   gap: 8px;
   transition: color 0.3s;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 
