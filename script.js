@@ -77,8 +77,12 @@ let isDragging = false;
 
 // Update carousel position
 function updateCarousel() {
-    track.style.transform = `translateX(-${index * (items[0].offsetWidth + 20)}px)`;
+    const itemWidth = items[0].getBoundingClientRect().width + 10; // exact visible width
+    track.style.transform = `translateX(-${index * itemWidth}px)`;
 }
+window.addEventListener("resize", () => {
+    updateCarousel();
+});
 
 // Next button
 nextBtn.addEventListener('click', () => {

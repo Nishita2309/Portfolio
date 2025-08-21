@@ -213,9 +213,10 @@ body.dark footer {
     cursor: grabbing;
 }
 .carousel-item {
-    flex: 0 0 80%; /* takes 80% width on mobile */
-    max-width: 300px;
-    margin: 0 auto;
+    flex: 0 0 80%;  /* on mobile */
+    max-width: 320px;
+    min-width: 250px; /* ensures it never gets too tiny */
+    margin: 0 10px;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
