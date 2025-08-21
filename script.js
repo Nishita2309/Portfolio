@@ -30,7 +30,7 @@ window.addEventListener("scroll", () => {
         if (rect.top < window.innerHeight - 100) {
             el.style.opacity = "1";
             el.style.transform = "translateY(0)";
-            el.style.transition = "all 0.8s ease-out";
+            el.style.transition = "all 10s ease-out";
         }
     });
 });
