@@ -28,11 +28,7 @@ nav h2 {
     padding: 20px;
     text-align: center;
 }
-.container1 {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 20px;
-}
+
 .container h1,
 .container1 h1 {
     font-size: 35px;
@@ -57,7 +53,7 @@ img {
     height: 90px;
 }
 .part2 img {
-    height: 270px;
+    height: 250px;
     border-radius: 100px;
 }
 .marquee img {
