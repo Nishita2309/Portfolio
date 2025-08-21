@@ -60,7 +60,37 @@ img {
     height: 200px;
     margin: 0 10px;
 }
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
+/* Desktop (image left, text right) */
+.part1 {
+    flex: 1;
+    order: 2;
+}
+.part2 {
+    flex: 1;
+    order: 1;
+}
+
+/* Mobile (stack, image first then text) */
+@media (max-width: 768px) {
+    .container1 {
+        flex-direction: column;
+        text-align: center;
+    }
+    .part1 {
+        order: 2; /* text after */
+    }
+    .part2 {
+        order: 1; /* image before */
+    }
+}
 
 .classholder {
     display: flex;
