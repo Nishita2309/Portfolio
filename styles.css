@@ -117,12 +117,15 @@ img {
     height: 70px;
     margin-bottom: 10px;
 }
-.part2 {
-    padding: 50px 100px;
+
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-
-.button {
+.button{
     background-color: black;
     border: none;
     color: white;
@@ -139,7 +142,6 @@ img {
     background-image: linear-gradient(#1230AE, #6C48C5);
     color: white;
 }
-
 
 a {
     color: white;
@@ -161,19 +163,19 @@ footer {
 }
 
 #mail-icon {
-    height: 30px;
+    height: 50px;
     vertical-align: -9px;
     padding-right: 5px;
     border-radius: 50%;
 }
 #linkedin-icon {
-    height: 25px;
+    height: 45px;
     vertical-align: -6px;
     padding-right: 5px;
     border-radius: 60%;
 }
 #github-icon {
-    height: 25px;
+    height: 45px;
     vertical-align: -7px;
     padding-right: 5px;
     border-radius: 50%;
@@ -288,3 +290,102 @@ body.dark footer {
         flex: 0 0 90%; /* larger on small screens */
     }
 }
+
+
+/* Hire Me Section */
+#hire {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#hire h1 {
+  font-size: 3rem;
+  margin-bottom: 5px;
+}
+
+#hire p {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+/* Form Styling */
+#hire form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#hire input,
+#hire textarea {
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+#hire input:focus,
+#hire textarea:focus {
+  border-color: black; /* highlight on focus */
+}
+
+/* Button (reuse your style) */
+#hire button {
+  background: black;
+  color: white;
+  padding: 12px;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#hire button:hover {
+    background-image: linear-gradient(#1230AE, #6C48C5);
+    color: white;
+}
+
+/* Contact Section */
+#contact {
+  background: #000; /* black background */
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #ccc; /* softer text */
+}
+
+/* Contact Info Layout */
+#contact .contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+

@@ -21,8 +21,11 @@
             Experienced in building real-world applications, including a healthcare web app (hackathon) and 
             an e-commerce platform. Actively expanding skills in AI and frontend/backend development.
             </p>
-            <h2 class="button">Hire Me</h2>
-            <h2 class="button">Contact Me</h2>
+            <div class="button-group">
+                <a href="#hire" class="button">Hire Me</a>
+                <a href="#contact" class="button">Contact Me</a>
+            </div>
+
         </div>
     </section>
     <main class="container">
@@ -122,14 +125,35 @@
         <button class="carousel-btn next">&#10095;</button>
     </div>
 </section>
-    <footer>
-        <h1>Contact Me</h1>
-        <img src="images/mail.png" alt="Email Icon" id="mail-icon"><a href="mailto:nishitapothana@example.com">nishitapothana@example.com</a>
-        <br>
-        <img src="images/linkedin.png" alt="LinkedIn Icon" id="linkedin-icon"><a href="https://www.linkedin.com/in/nishitapothana">Nishita Pothana</a>
-        <br>
-        <img src="images/github.png" alt="GitHub Icon" id="github-icon"><a href="https://github.com/Nishita2309">Nishita Pothana</a>
-    </footer>
+<section id="hire" class="container">
+  <h1>Hire Me!!</h1>
+  <p>I'm open to internships, freelance projects, and collaborations. 
+     Please share your project details below:</p>
+
+  <form action="https://formspree.io/f/xovloggr" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="email" name="email" placeholder="Your Email" required><br>
+    <textarea name="message" placeholder="Tell me about your project..." required></textarea><br>
+    <button type="submit" class="button">Send Request</button>
+  </form>
+</section>
+
+    <footer id="contact">
+  <h1>Contact Me</h1>
+  <p>Have a question, collaboration idea, or job opportunity? Let's connect!</p>
+  
+  <div class="contact-links">
+    <a href="mailto:nishitapothana@gmail.com">
+      <img src="images/mail.png" alt="Email Icon" id="mail-icon">
+    </a>
+    <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+      <img src="images/linkedin.png" alt="LinkedIn Icon" id="linkedin-icon">
+    </a>
+    <a href="https://github.com/yourgithub" target="_blank">
+      <img src="images/github.png" alt="GitHub Icon" id="github-icon">
+    </a>
+  </div>
+</footer>
 
     <button id="backToTop">↑</button>
 
