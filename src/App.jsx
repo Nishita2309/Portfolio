@@ -11,7 +11,7 @@ import ParticleBackground from './components/ParticleBackground'
 
 export default function App() {
   return (
-    <main className="relative bg-[#050505] text-white overflow-hidden">
+    <main className="relative z-10 bg-transparent text-white overflow-hidden">
       <ParticleBackground />
 
       <Navbar />

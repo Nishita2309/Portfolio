@@ -1,30 +1,44 @@
 export default function Navbar() {
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-md bg-white/5 border-b border-white/10">
-            <div className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
-
-                <h1 className="text-xl font-bold tracking-widest">
+        <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl" style={{ paddingLeft: '20px', paddingRight: '20px' }}>
+            <div className="w-full h-[60px] flex items-center justify-between">
+                {/* LOGO */}
+                <h1 className="text-2xl font-black tracking-wide">
                     NISHITA
                 </h1>
 
-                <div className="hidden md:flex gap-10 text-sm uppercase tracking-widest text-zinc-400">
-                    <a href="#about" className="hover:text-white transition">
+                {/* LINKS */}
+                <div className="hidden md:flex items-center gap-14 uppercase tracking-[0.25em] text-sm text-zinc-400">
+                    <a
+                        href="#about"
+                        className="hover:text-white transition duration-300"
+                    >
                         About
                     </a>
 
-                    <a href="#projects" className="hover:text-white transition">
+                    <a
+                        href="#projects"
+                        className="hover:text-white transition duration-300"
+                    >
                         Projects
                     </a>
 
-                    <a href="#skills" className="hover:text-white transition">
+                    <a
+                        href="#skills"
+                        className="hover:text-white transition duration-300"
+                    >
                         Skills
                     </a>
 
-                    <a href="#contact" className="hover:text-white transition">
+                    <a
+                        href="#contact"
+                        className="hover:text-white transition duration-300"
+                    >
                         Contact
                     </a>
                 </div>
             </div>
+
         </nav>
     )
 }
