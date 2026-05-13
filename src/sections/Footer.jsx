@@ -55,7 +55,7 @@ export default function Footer() {
             external: true
         },
         {
-            href: 'https://linkedin.com/in/nishita2309',
+            href: 'https://www.linkedin.com/in/nishita-pothana-840438216/',
             label: 'LinkedIn',
             icon: (
                 <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
@@ -164,21 +164,6 @@ export default function Footer() {
                             />
                         ))}
                     </motion.div>
-
-                    {/* Tech Stack Note */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 1.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                        className="text-center lg:text-left"
-                    >
-                        <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full">
-                            <span className="text-zinc-400 text-sm">Built with</span>
-                            <span className="text-teal-400 font-medium">React</span>
-                            <span className="text-zinc-400 text-sm">+</span>
-                            <span className="text-cyan-400 font-medium">Tailwind CSS</span>
-                        </div>
-                    </motion.div>
                 </motion.div>
 
                 {/* Copyright Section */}
@@ -197,17 +182,6 @@ export default function Footer() {
                         >
                             © 2026 Nishita Portfolio. All rights reserved.
                         </motion.p>
-                        
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={isInView ? { opacity: 1 } : {}}
-                            transition={{ delay: 1.8, duration: 0.8 }}
-                            className="flex items-center gap-2"
-                        >
-                            <span className="text-zinc-500 text-sm">Crafted with</span>
-                            <span className="text-red-500">❤️</span>
-                            <span className="text-zinc-500 text-sm">and code</span>
-                        </motion.div>
                     </div>
                 </motion.div>
             </div>

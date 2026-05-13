@@ -1,7 +1,7 @@
 export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/30 backdrop-blur-xl">
-            <div className="max-w-7xl mx-auto h-16 px-6 sm:px-8 lg:px-10 flex items-center justify-between">
+            <div style={{ paddingLeft: '20px', paddingRight: '20px' }} className="w-full h-16 flex items-center justify-between">
                 {/* LOGO */}
                 <h1 className="text-2xl font-black tracking-wide">
                     NISHITA
