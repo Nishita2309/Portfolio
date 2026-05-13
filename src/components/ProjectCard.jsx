@@ -30,16 +30,16 @@ export default function ProjectCard({
                     initial={{ opacity: 0, scale: 0 }}
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                    className="absolute -top-3 -right-3 z-20 px-3 py-1 bg-gradient-to-r from-teal-500 to-cyan-400 text-white text-xs font-bold rounded-full"
+                    className="absolute -top-3 left-1/2 z-20 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-teal-500 to-cyan-400 text-white text-xs font-bold rounded-full"
                 >
                     Featured
                 </motion.div>
             )}
 
-            <div className={`relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden hover:border-teal-500/30 transition-all duration-700 group-hover:bg-white/10 flex-1 flex flex-col ${featured ? 'min-h-[520px]' : 'min-h-[420px]'}`}>
+            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden hover:border-teal-500/30 transition-all duration-700 group-hover:bg-white/10 flex-1 flex flex-col min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]">
                 
                 {/* Project Image - Unified for all cards */}
-                <div className={`relative overflow-hidden flex-shrink-0 ${featured ? 'h-64 lg:h-72' : 'h-48 lg:h-56'}`}>
+                <div className="relative overflow-hidden flex-shrink-0 h-56 lg:h-60">
                     <motion.img
                         src={image}
                         alt={title}
@@ -66,8 +66,8 @@ export default function ProjectCard({
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                         >
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-1.305 0-2.214-.962-2.214-2.214 0-.616.331-1.128.828-1.387 1.098-.263.96-.263 1.98 0 3.573 1.655 3.573 3.951z"/>
+                            <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.65-.88-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                             </svg>
                         </motion.a>
                         
@@ -87,13 +87,13 @@ export default function ProjectCard({
                 </div>
 
                 {/* Content - Flex Grow with Enhanced Padding */}
-                <div className={`flex-1 flex flex-col ${featured ? 'p-10 lg:p-12' : 'p-8 lg:p-10'}`}>
+                <div className={`flex-1 flex flex-col items-center text-center ${featured ? 'p-8 lg:p-9' : 'p-7 lg:p-8'}`}>
                     {/* Technologies */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-                        className={`flex flex-wrap gap-2 mb-6 ${featured ? 'max-h-24' : 'max-h-20'} overflow-y-auto`}
+                        className={`flex flex-wrap justify-center gap-2 mb-6 ${featured ? 'max-h-24' : 'max-h-20'} overflow-y-auto w-full`}
                     >
                         {technologies.slice(0, featured ? 12 : 6).map((tech, techIndex) => (
                             <motion.span
@@ -120,7 +120,7 @@ export default function ProjectCard({
 
                     {/* Title */}
                     <motion.h3 
-                        className={`font-bold text-white mb-5 group-hover:text-teal-400 transition-colors duration-300 ${featured ? 'text-3xl lg:text-4xl' : 'text-xl lg:text-2xl'}`}
+                        className={`font-bold text-white mb-4 group-hover:text-teal-400 transition-colors duration-300 ${featured ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
@@ -143,18 +143,18 @@ export default function ProjectCard({
                         initial={{ opacity: 0, y: 20 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
-                        className={`flex gap-4 mt-auto ${featured ? 'gap-5' : 'gap-4'}`}
+                        className={`flex flex-col sm:flex-row flex-wrap gap-3 mt-auto w-full justify-center ${featured ? 'sm:gap-4' : 'sm:gap-3'}`}
                     >
                         <motion.a
                             href={githubUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex-1 flex items-center justify-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 group ${featured ? 'px-7 py-4 rounded-xl gap-4' : 'px-5 py-3 rounded-lg gap-3'}`}
+                            className={`flex w-full min-[480px]:w-auto sm:flex-1 sm:min-w-[140px] max-w-sm items-center justify-center gap-3 px-5 py-3 bg-white/5 backdrop-blur-sm border border-white/10 text-white hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 group ${featured ? 'px-7 py-4 rounded-xl gap-4' : 'px-5 py-3 rounded-lg gap-3'}`}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            <svg width={featured ? "18" : "16"} height={featured ? "18" : "16"} viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-1.305 0-2.214-.962-2.214-2.214 0-.616.331-1.128.828-1.387 1.098-.263.96-.263 1.98 0 3.573 1.655 3.573 3.951z"/>
+                            <svg width={featured ? "18" : "16"} height={featured ? "18" : "16"} viewBox="0 0 16 16" fill="currentColor" aria-hidden>
+                                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.65-.88-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
                             </svg>
                             <span>{featured ? 'View Code' : 'Code'}</span>
                         </motion.a>
@@ -163,7 +163,7 @@ export default function ProjectCard({
                             href={liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`flex-1 flex items-center justify-center gap-3 px-5 py-3 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30 text-teal-400 hover:from-teal-500 hover:to-cyan-500 hover:text-white transition-all duration-300 group ${featured ? 'px-7 py-4 rounded-xl gap-4' : 'px-5 py-3 rounded-lg gap-3'}`}
+                            className={`flex w-full min-[480px]:w-auto sm:flex-1 sm:min-w-[140px] max-w-sm items-center justify-center gap-3 px-5 py-3 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 border border-teal-500/30 text-teal-400 hover:from-teal-500 hover:to-cyan-500 hover:text-white transition-all duration-300 group ${featured ? 'px-7 py-4 rounded-xl gap-4' : 'px-5 py-3 rounded-lg gap-3'}`}
                             whileHover={{ scale: 1.02 }}
                             whileTap={{ scale: 0.98 }}
                         >

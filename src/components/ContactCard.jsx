@@ -25,7 +25,7 @@ export default function ContactCard({
             <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-3xl blur-xl opacity-0 group-hover:opacity-70 transition-opacity duration-700 pointer-events-none" />
             
             {/* Main Card */}
-            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden transition-all duration-700 group-hover:border-teal-500/30 group-hover:bg-white/10 p-8 lg:p-12">
+            <div className="relative h-full bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden transition-all duration-700 group-hover:border-teal-500/30 group-hover:bg-white/10 p-7 sm:p-8 lg:p-10">
                 
                 {/* Content */}
                 <div className="relative z-10">

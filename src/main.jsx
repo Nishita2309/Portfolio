@@ -40,7 +40,7 @@ document.addEventListener('click', (e) => {
     const id = target.getAttribute('href')
     if (id === '#') return // Ignore empty hashes
     lenis.scrollTo(id, { 
-      offset: 0, // Adjust this if you have a fixed navbar with height
+      offset: 72, // Account for the fixed cinematic navbar
       duration: 1.5, 
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
     })

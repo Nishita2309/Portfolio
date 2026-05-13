@@ -96,7 +96,7 @@ export default function About() {
         <section
             ref={sectionRef}
             id="about"
-            className="relative min-h-screen flex items-center justify-center px-6 py-40 lg:py-48 overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-10 py-28 sm:py-32 lg:py-40 overflow-hidden"
         >
             {/* Animated Background Glow */}
             <motion.div
@@ -110,27 +110,27 @@ export default function About() {
                 }}
             />
 
-            <div className="max-w-6xl xl:max-w-7xl mx-auto w-full relative z-10 px-4 lg:px-8">
+            <div className="max-w-7xl mx-auto w-full relative z-10">
                 <motion.div 
                     style={{ scale }}
-                    className="grid lg:grid-cols-2 gap-20 xl:gap-32 items-center"
+                    className="grid lg:grid-cols-2 gap-14 lg:gap-20 xl:gap-28 items-center"
                 >
                     {/* Text Content - Left Side */}
                     <motion.div
                         variants={containerVariants}
                         initial="hidden"
                         animate={isInView ? "visible" : "hidden"}
-                        className="space-y-10 lg:space-y-14 order-1 lg:order-1"
+                        className="space-y-8 lg:space-y-12 order-1 lg:order-1 max-w-2xl"
                     >
                         {/* Section Header */}
                         <motion.div variants={itemVariants} className="space-y-5 lg:space-y-6">
                             <motion.div 
-                                className="flex items-center gap-6"
+                                className="flex items-center gap-4 sm:gap-6"
                                 initial={{ width: 0 }}
                                 animate={isInView ? { width: "auto" } : {}}
                                 transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                             >
-                                <div className="w-20 h-[1px] bg-teal-500/50" />
+                                <div className="w-14 sm:w-20 h-[1px] bg-teal-500/50" />
                                 <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm font-medium">
                                     About Me
                                 </p>
@@ -139,7 +139,7 @@ export default function About() {
 
                         {/* Cinematic Typography */}
                         <motion.div variants={itemVariants} className="space-y-4 lg:space-y-6">
-                            <h2 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[0.9] tracking-tighter">
+                            <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black leading-[0.9] tracking-tighter">
                                 <span className="block text-white mb-2">Building</span>
                                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">
                                     Digital Futures
@@ -157,7 +157,7 @@ export default function About() {
                         {/* Description */}
                         <motion.p 
                             variants={itemVariants}
-                            className="text-zinc-400 leading-relaxed text-lg md:text-xl lg:text-2xl font-light max-w-md lg:max-w-lg"
+                            className="text-zinc-400 leading-relaxed text-lg md:text-xl lg:text-2xl font-light max-w-xl"
                         >
                             I'm a Computer Science student crafting immersive digital experiences at the intersection of 
                             <span className="text-teal-400 font-medium"> full-stack development</span> and 
@@ -167,7 +167,7 @@ export default function About() {
                         {/* Stats Grid */}
                         <motion.div 
                             variants={itemVariants}
-                            className="grid grid-cols-3 gap-8 lg:gap-12 pt-8 lg:pt-10"
+                            className="grid grid-cols-3 gap-4 sm:gap-8 lg:gap-10 pt-6 lg:pt-8"
                         >
                             {[
                                 { value: counters.projects, label: 'Projects', suffix: '+' },
@@ -180,7 +180,7 @@ export default function About() {
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ type: "spring", damping: 15, stiffness: 300 }}
                                 >
-                                    <div className="text-3xl md:text-4xl lg:text-5xl font-black text-white tabular-nums mb-3">
+                                    <div className="text-3xl md:text-4xl lg:text-5xl font-black text-white tabular-nums mb-2">
                                         <motion.span
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
@@ -190,7 +190,7 @@ export default function About() {
                                         </motion.span>
                                         {stat.suffix}
                                     </div>
-                                    <div className="text-zinc-500 text-sm uppercase tracking-widest">
+                                    <div className="text-zinc-500 text-xs sm:text-sm uppercase tracking-widest">
                                         {stat.label}
                                     </div>
                                 </motion.div>
@@ -205,7 +205,7 @@ export default function About() {
                         transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
                         className="relative order-2 lg:order-2 flex items-center justify-center lg:justify-end"
                     >
-                        <div className="relative group w-full max-w-sm lg:max-w-xs">
+                        <div className="relative group w-full max-w-sm lg:max-w-md xl:max-w-sm">
                             {/* Glow Effect */}
                             <div className="absolute inset-0 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
                             

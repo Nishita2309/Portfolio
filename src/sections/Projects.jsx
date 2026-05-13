@@ -134,7 +134,7 @@ export default function Projects() {
         <section
             ref={sectionRef}
             id="projects"
-            className="relative min-h-screen flex items-center justify-center px-6 py-48 lg:py-56 overflow-hidden"
+            className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-10 pt-40 pb-28 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40 overflow-hidden"
         >
             {/* Animated Background Glow */}
             <motion.div
@@ -148,29 +148,29 @@ export default function Projects() {
                 }}
             />
 
-            <div className="max-w-7xl xl:max-w-8xl mx-auto w-full relative z-10">
+            <div className="max-w-7xl mx-auto w-full relative z-10 text-center">
                 {/* Section Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 0.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mb-96 lg:mb-[28rem]"
+                    className="text-center mb-16 lg:mb-24"
                 >
                     <motion.div 
-                        className="flex items-center justify-center gap-8 mb-12"
+                        className="flex items-center justify-center gap-4 sm:gap-8 mb-10 lg:mb-12"
                         initial={{ width: 0 }}
                         animate={isInView ? { width: "auto" } : {}}
                         transition={{ delay: 0.4, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                     >
-                        <div className="w-32 h-[1px] bg-teal-500/50" />
+                        <div className="w-16 sm:w-24 lg:w-32 h-[1px] bg-teal-500/50" />
                         <p className="uppercase tracking-[0.3em] text-zinc-500 text-sm font-medium">
                             Projects
                         </p>
-                        <div className="w-32 h-[1px] bg-teal-500/50" />
+                        <div className="w-16 sm:w-24 lg:w-32 h-[1px] bg-teal-500/50" />
                     </motion.div>
 
                     <motion.h2 
-                        className="text-5xl md:text-7xl lg:text-8xl font-black leading-none tracking-tighter"
+                        className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tighter"
                         initial={{ opacity: 0, y: 30 }}
                         animate={isInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ delay: 0.6, duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -182,7 +182,7 @@ export default function Projects() {
                     </motion.h2>
 
                     <motion.div 
-                        className="h-1 w-40 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-full mx-auto mt-12"
+                        className="h-1 w-32 sm:w-40 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-full mx-auto mt-10 lg:mt-12"
                         initial={{ scaleX: 0 }}
                         animate={isInView ? { scaleX: 1 } : {}}
                         transition={{ delay: 0.8, duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -195,13 +195,13 @@ export default function Projects() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-24 lg:gap-32 mt-80 lg:mt-[24rem] max-w-8xl xl:max-w-10xl mx-auto w-full"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 w-full items-stretch justify-items-center"
                 >
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
                             variants={itemVariants}
-                            className="group h-full"
+                            className="group h-full w-full max-w-xl md:max-w-none"
                         >
                             <ProjectCard 
                                 {...project}
@@ -218,7 +218,7 @@ export default function Projects() {
                     initial={{ opacity: 0, y: 50 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ delay: 1.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mt-32 lg:mt-40"
+                    className="text-center mt-20 lg:mt-24"
                 >
                     <motion.a
                         href="https://github.com/Nishita2309"

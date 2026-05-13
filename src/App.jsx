@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import AnimatedBackground from './components/AnimatedBackground'
 
 import Hero from './sections/Hero'
 import About from './sections/About'
@@ -16,12 +15,14 @@ export default function App() {
 
       <Navbar />
 
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
+      <div className="flex flex-col gap-[40px]">
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   )
 }

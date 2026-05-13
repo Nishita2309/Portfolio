@@ -60,7 +60,7 @@ export default function Hero() {
     };
 
     return (
-        <section id="hero" className="relative h-screen w-full flex items-center justify-center overflow-hidden px-6">
+        <section id="hero" className="relative min-h-screen w-full flex items-center justify-center overflow-hidden px-6 sm:px-8 lg:px-10 pt-24 pb-24 sm:pb-28">
 
             {/* Glowing Accent */}
             <motion.div
@@ -73,20 +73,20 @@ export default function Hero() {
                 }}
             />
 
-            <div className="max-w-7xl w-full flex flex-col items-center justify-center relative z-10">
+            <div className="max-w-7xl mx-auto w-full flex flex-col items-center justify-center relative z-10">
 
                 {/* Subtitle */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex items-center gap-4 mb-6"
+                    className="flex items-center justify-center gap-3 sm:gap-4 mb-6 text-center"
                 >
-                    <div className="w-12 h-[1px] bg-white/30" />
+                    <div className="w-8 sm:w-12 h-[1px] bg-white/30" />
                     <p className="uppercase tracking-[0.3em] text-zinc-400 text-xs md:text-sm font-medium">
                         Creative Developer & AI Enthusiast
                     </p>
-                    <div className="w-12 h-[1px] bg-white/30" />
+                    <div className="w-8 sm:w-12 h-[1px] bg-white/30" />
                 </motion.div>
 
                 {/* Giant Typography */}
@@ -95,7 +95,7 @@ export default function Hero() {
                     initial="hidden"
                     animate="visible"
                     style={{ x: textX, y: textY, perspective: 1000 }}
-                    className="text-[16vw] md:text-[12vw] font-black uppercase leading-none tracking-tighter flex items-center overflow-hidden text-white"
+                    className="text-[clamp(4.5rem,16vw,12rem)] md:text-[clamp(6rem,12vw,13rem)] font-black uppercase leading-none tracking-tighter flex items-center overflow-hidden text-white"
                 >
                     {letters.map((letter, i) => (
                         <motion.span
@@ -113,7 +113,7 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.2, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="mt-8 md:mt-12 max-w-xl text-center"
+                    className="mt-8 md:mt-10 max-w-2xl text-center"
                 >
                     <p className="text-zinc-400 text-base md:text-lg leading-relaxed font-light">
                         I build cinematic digital experiences, AI-powered applications,

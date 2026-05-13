@@ -8,12 +8,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  position: relative;
 }
 
 body,
 #root {
   width: 100%;
   min-height: 100%;
+  position: relative;
   background: #050505;
   color: white;
   overflow-x: hidden;
