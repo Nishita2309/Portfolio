@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useInView, useTransform, useSpring } from 'framer-motion';
 import ContactCard from '../components/ContactCard';
+import resumePdf from '../assets/Resume/Nishita pothana Resume Updated.pdf';
 
 export default function Contact() {
     const sectionRef = useRef(null);
@@ -175,8 +176,8 @@ export default function Contact() {
                                 </motion.div>
  
                                 <motion.a
-                                    href="/resume.pdf"
-                                    download
+                                    href={resumePdf}
+                                    download="Nishita_pothana_Resume_Updated.pdf"
                                     className="inline-flex items-center justify-center w-full sm:w-auto px-16 py-9 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 font-bold text-lg group tracking-wide"
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={isInView ? { opacity: 1, y: 0 } : {}}
