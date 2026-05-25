@@ -48,7 +48,7 @@ export default function Contact() {
         },
         {
             type: 'github',
-            value: 'github.com/Nishita2309',
+            value: 'https://github.com/Nishita2309',
             label: 'GitHub',
             icon: (
                 <svg className="w-5 h-5 shrink-0" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
@@ -157,17 +157,17 @@ export default function Contact() {
                                 Let's build something extraordinary together.
                             </p>
  
-                            <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 justify-center items-center">
+                            <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 justify-center items-center w-full max-w-2xl mx-auto">
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                                     transition={{ delay: 1.2, duration: 0.8 }}
-                                    className="relative group/btn w-full sm:w-auto"
+                                    className="relative group/btn w-full sm:w-auto flex-1 max-w-xs"
                                 >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-2xl blur-2xl opacity-40 group-hover/btn:opacity-60 transition-opacity duration-500" />
+                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-400 rounded-xl blur-xl opacity-40 group-hover/btn:opacity-60 transition-opacity duration-500" />
                                     <motion.a
-                                        href="mailto:nishita@example.com"
-                                        className="relative inline-flex items-center justify-center w-full sm:w-auto px-16 py-9 bg-white text-black font-bold rounded-2xl transition-all duration-300 overflow-hidden text-lg tracking-wide"
+                                        href="mailto:nishitapothana@gmail.com"
+                                        className="relative inline-flex items-center justify-center w-full px-8 py-4 bg-white text-black font-bold rounded-xl transition-all duration-300 overflow-hidden text-base tracking-wide shadow-lg hover:shadow-teal-500/25"
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
                                     >
@@ -175,21 +175,27 @@ export default function Contact() {
                                     </motion.a>
                                 </motion.div>
  
-                                <motion.a
-                                    href={resumePdf}
-                                    download="Nishita_pothana_Resume_Updated.pdf"
-                                    className="inline-flex items-center justify-center w-full sm:w-auto px-16 py-9 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl text-white hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 font-bold text-lg group tracking-wide"
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.9 }}
+                                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
                                     transition={{ delay: 1.4, duration: 0.8 }}
-                                    whileHover={{ y: -2 }}
+                                    className="relative group/btn w-full sm:w-auto flex-1 max-w-xs"
                                 >
-                                    <svg className="w-6 h-6 mr-3 text-teal-400 group-hover:scale-110 transition-transform" viewBox="0 0 16 16" fill="currentColor">
-                                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a.5.5 0 0 1 1 0v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2a.5.5 0 0 1 .5-.5z" />
-                                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
-                                    </svg>
-                                    Download Resume
-                                </motion.a>
+                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500/10 to-cyan-500/10 rounded-xl blur-xl opacity-0 group-hover/btn:opacity-30 transition-opacity duration-500" />
+                                    <motion.a
+                                        href={resumePdf}
+                                        download="Nishita_pothana_Resume_Updated.pdf"
+                                        className="relative inline-flex items-center justify-center w-full px-8 py-4 bg-white/5 backdrop-blur-sm border border-white/10 text-white font-bold rounded-xl hover:bg-white/10 hover:border-teal-500/30 transition-all duration-300 text-base tracking-wide group"
+                                        whileHover={{ scale: 1.05 }}
+                                        whileTap={{ scale: 0.95 }}
+                                    >
+                                        <svg className="w-5 h-5 mr-3 text-teal-400 group-hover:scale-110 transition-transform" viewBox="0 0 16 16" fill="currentColor">
+                                            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2a.5.5 0 0 1 1 0v2a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2a.5.5 0 0 1 .5-.5z" />
+                                            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
+                                        </svg>
+                                        <span className="relative z-10">Download Resume</span>
+                                    </motion.a>
+                                </motion.div>
                             </div>
                         </div>
                     </ContactCard>
@@ -197,36 +203,44 @@ export default function Contact() {
  
                 {/* Contact Info Cards - Responsive Grid Arrangement */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 w-full mt-20 lg:mt-32">
-                    {contactInfo.map((item, index) => (
-                        <motion.div
-                            key={item.type}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={isInView ? { opacity: 1, y: 0 } : {}}
-                            transition={{ delay: 1.6 + index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                            className="flex"
-                        >
-                            <motion.a
-                                href={item.type === 'email' ? `mailto:${item.value}` : item.type === 'location' ? '#' : item.value}
-                                target={item.type === 'github' || item.type === 'linkedin' ? '_blank' : '_self'}
-                                rel="noopener noreferrer"
-                                className="group relative flex flex-col items-center justify-center w-full p-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl hover:bg-white/10 hover:border-teal-500/30 transition-all duration-500 text-center"
-                                whileHover={{ y: -10 }}
+                    {contactInfo.map((item, index) => {
+                        const isLocation = item.type === 'location';
+                        const Tag = isLocation ? motion.div : motion.a;
+                        const linkProps = isLocation ? {} : {
+                            href: item.type === 'email' ? `mailto:${item.value}` : item.value,
+                            target: item.type === 'email' ? '_self' : '_blank',
+                            rel: 'noopener noreferrer'
+                        };
+
+                        return (
+                            <motion.div
+                                key={item.type}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                                transition={{ delay: 1.6 + index * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                                className="flex"
                             >
-                                {/* Subtle Glow */}
-                                <div className="absolute inset-0 bg-teal-500/0 group-hover:bg-teal-500/5 rounded-3xl blur-2xl transition-all duration-500" />
-                                
-                                <div className="relative z-10 flex flex-col items-center">
-                                    <div className="p-5 bg-teal-500/10 rounded-2xl text-teal-400 mb-6 group-hover:scale-110 group-hover:bg-teal-500/20 transition-all duration-500">
-                                        {item.icon}
+                                <Tag
+                                    {...linkProps}
+                                    className={`group relative flex flex-col items-center justify-center w-full p-10 bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl hover:bg-white/10 hover:border-teal-500/30 transition-all duration-500 text-center ${!isLocation ? 'cursor-pointer' : ''}`}
+                                    whileHover={isLocation ? {} : { y: -10 }}
+                                >
+                                    {/* Subtle Glow */}
+                                    <div className="absolute inset-0 bg-teal-500/0 group-hover:bg-teal-500/5 rounded-3xl blur-2xl transition-all duration-500" />
+                                    
+                                    <div className="relative z-10 flex flex-col items-center">
+                                        <div className="p-5 bg-teal-500/10 rounded-2xl text-teal-400 mb-6 group-hover:scale-110 group-hover:bg-teal-500/20 transition-all duration-500">
+                                            {item.icon}
+                                        </div>
+                                        <div className="text-white font-bold text-xl mb-2 tracking-tight">{item.label}</div>
+                                        <div className="text-zinc-500 text-sm font-medium group-hover:text-zinc-300 transition-colors duration-300 truncate w-full max-w-[180px]">
+                                            {item.type === 'github' ? 'github.com/Nishita2309' : item.value}
+                                        </div>
                                     </div>
-                                    <div className="text-white font-bold text-xl mb-2 tracking-tight">{item.label}</div>
-                                    <div className="text-zinc-500 text-sm font-medium group-hover:text-zinc-300 transition-colors duration-300 truncate w-full max-w-[180px]">
-                                        {item.value}
-                                    </div>
-                                </div>
-                            </motion.a>
-                        </motion.div>
-                    ))}
+                                </Tag>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

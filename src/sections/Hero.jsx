@@ -122,9 +122,9 @@ export default function Hero() {
 
                     <div className="mt-10">
                         <MagneticButton
-                            className="rounded-full border border-white/20 bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-widest text-xs font-semibold relative overflow-hidden group"
+                            className="rounded-full border border-white/20 bg-transparent text-white hover:bg-white hover:text-black transition-all duration-500 uppercase tracking-widest text-xs font-semibold relative overflow-hidden group text-center"
                             style={{ padding: '20px 48px' }}
-                            onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
+                            href="#projects"
                         >
                             <span className="relative z-10 flex items-center justify-center gap-3">
                                 Explore Work

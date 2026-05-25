@@ -120,7 +120,7 @@ export default function Skills() {
         <section
             ref={sectionRef}
             id="skills"
-            className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 py-16 sm:px-8 sm:py-20 lg:px-10 lg:py-24"
+            className="relative flex flex-col items-center w-full overflow-hidden px-6 pt-32 pb-24 sm:px-8 sm:pt-40 sm:pb-32 lg:px-10 lg:pt-48 lg:pb-40"
             style={{
                 '--mouse-x': `${mousePosition.x}%`,
                 '--mouse-y': `${mousePosition.y}%`,
@@ -237,7 +237,7 @@ export default function Skills() {
                                         >
                                             <span className="absolute -inset-px rounded-2xl bg-gradient-to-r from-teal-500/0 via-teal-400/35 to-cyan-400/0 opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-100" />
                                             <span
-                                                className="relative inline-flex size-[52px] items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-zinc-200 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors duration-300 group-hover:border-teal-500/35 group-hover:bg-white/[0.08] group-hover:text-white group-hover:shadow-[0_0_28px_-8px_rgba(45,212,191,0.45)] sm:size-14 md:size-[60px]"
+                                                className="relative inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4.5 py-3 text-zinc-200 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur-md transition-colors duration-300 group-hover:border-teal-500/35 group-hover:bg-white/[0.08] group-hover:text-white group-hover:shadow-[0_0_28px_-8px_rgba(45,212,191,0.45)]"
                                                 style={{
                                                     backgroundImage:
                                                         'radial-gradient(120% 120% at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(45, 212, 191, 0.07) 0%, transparent 55%)',
@@ -245,7 +245,7 @@ export default function Skills() {
                                             >
                                                 {Icon ? (
                                                     <Icon
-                                                        className="size-[26px] shrink-0 text-current sm:size-7 md:size-8"
+                                                        className="size-5 shrink-0 text-teal-400 group-hover:text-teal-300 transition-colors duration-300 sm:size-5.5 md:size-6"
                                                         aria-hidden
                                                     />
                                                 ) : (
@@ -253,6 +253,9 @@ export default function Skills() {
                                                         ?
                                                     </span>
                                                 )}
+                                                <span className="text-sm font-medium tracking-wide text-zinc-300 group-hover:text-white transition-colors duration-300">
+                                                    {name}
+                                                </span>
                                             </span>
                                         </motion.span>
                                     );

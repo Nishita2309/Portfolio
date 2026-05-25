@@ -11,32 +11,20 @@ export default function ProjectCard({
     index,
     isInView 
 }) {
-    // Unified vertical card structure for both featured and regular projects
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ 
-                delay: 0.3 + index * 0.1, 
-                duration: 0.8, 
-                ease: [0.16, 1, 0.3, 1] 
-            }}
             whileHover={{ y: -5 }}
             className="group relative h-full flex flex-col"
         >
-            {/* Featured Badge */}
-            {featured && (
-                <motion.div
-                    initial={{ opacity: 0, scale: 0 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                    transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
-                    className="absolute -top-3 left-1/2 z-20 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-teal-500 to-cyan-400 text-white text-xs font-bold rounded-full"
-                >
-                    Featured
-                </motion.div>
-            )}
-
             <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl overflow-hidden hover:border-teal-500/30 transition-all duration-700 group-hover:bg-white/10 flex-1 flex flex-col min-h-[480px] sm:min-h-[520px] lg:min-h-[560px]">
+                {/* Featured Badge */}
+                {featured && (
+                    <div
+                        className="absolute top-6 right-6 z-20 px-4 py-1.5 bg-gradient-to-r from-teal-500 to-cyan-400 text-white text-[11px] font-extrabold uppercase tracking-wider rounded-full shadow-lg whitespace-nowrap"
+                    >
+                        Featured
+                    </div>
+                )}
                 
                 {/* Project Image - Unified for all cards */}
                 <div className="relative overflow-hidden flex-shrink-0 h-56 lg:h-60">
@@ -89,61 +77,43 @@ export default function ProjectCard({
                 {/* Content - Flex Grow with Enhanced Padding */}
                 <div className={`flex-1 flex flex-col items-center text-center ${featured ? 'p-8 lg:p-9' : 'p-7 lg:p-8'}`}>
                     {/* Technologies */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
+                    <div
                         className={`flex flex-wrap justify-center gap-2 mb-6 ${featured ? 'max-h-24' : 'max-h-20'} overflow-y-auto w-full`}
                     >
-                        {technologies.slice(0, featured ? 12 : 6).map((tech, techIndex) => (
-                            <motion.span
+                        {technologies.slice(0, featured ? 12 : 6).map((tech) => (
+                            <span
                                 key={tech}
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                                transition={{ delay: 0.6 + index * 0.1 + techIndex * 0.02, duration: 0.4 }}
                                 className={`px-3 py-1.5 bg-teal-500/20 border border-teal-500/30 text-teal-400 text-xs font-medium rounded-full ${featured ? 'px-4 py-2' : 'px-3 py-1.5'}`}
                             >
                                 {tech}
-                            </motion.span>
+                            </span>
                         ))}
                         {technologies.length > (featured ? 12 : 6) && (
-                            <motion.span
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                                transition={{ delay: 0.6 + index * 0.1 + (featured ? 0.24 : 0.12), duration: 0.4 }}
+                            <span
                                 className={`px-3 py-1.5 bg-white/10 border border-white/20 text-white/60 text-xs font-medium rounded-full ${featured ? 'px-4 py-2' : 'px-3 py-1.5'}`}
                             >
                                 +{technologies.length - (featured ? 12 : 6)} more
-                            </motion.span>
+                            </span>
                         )}
-                    </motion.div>
+                    </div>
 
                     {/* Title */}
-                    <motion.h3 
+                    <h3 
                         className={`font-bold text-white mb-4 group-hover:text-teal-400 transition-colors duration-300 ${featured ? 'text-2xl lg:text-3xl' : 'text-xl lg:text-2xl'}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
                     >
                         {title}
-                    </motion.h3>
+                    </h3>
 
                     {/* Description - Flex Grow */}
-                    <motion.p 
+                    <p 
                         className={`text-zinc-400 leading-relaxed mb-8 flex-1 ${featured ? 'text-lg lg:text-xl' : 'text-sm lg:text-base'}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
                     >
                         {description}
-                    </motion.p>
+                    </p>
 
                     {/* Action Buttons */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ delay: 0.7 + index * 0.1, duration: 0.6 }}
-                        className={`flex flex-col sm:flex-row flex-wrap gap-3 mt-auto w-full justify-center ${featured ? 'sm:gap-4' : 'sm:gap-3'}`}
+                    <div
+                        className="flex flex-col sm:flex-row flex-wrap gap-4 sm:gap-6 mt-auto w-full justify-center"
                     >
                         <motion.a
                             href={githubUrl}
@@ -172,7 +142,7 @@ export default function ProjectCard({
                             </svg>
                             <span>{featured ? 'Live Demo' : 'Live Demo'}</span>
                         </motion.a>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
 

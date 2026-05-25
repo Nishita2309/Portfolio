@@ -134,7 +134,7 @@ export default function Projects() {
         <section
             ref={sectionRef}
             id="projects"
-            className="relative min-h-screen flex items-center justify-center px-6 sm:px-8 lg:px-10 pt-40 pb-28 sm:pt-44 sm:pb-32 lg:pt-52 lg:pb-40 overflow-hidden"
+            className="relative flex flex-col items-center w-full px-6 sm:px-8 lg:px-10 pt-32 pb-32 sm:pt-40 sm:pb-40 lg:pt-48 lg:pb-48 overflow-hidden"
         >
             {/* Animated Background Glow */}
             <motion.div
@@ -195,13 +195,13 @@ export default function Projects() {
                     variants={containerVariants}
                     initial="hidden"
                     animate={isInView ? "visible" : "hidden"}
-                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10 w-full items-stretch justify-items-center"
+                    className="flex flex-wrap justify-center gap-8 lg:gap-10 w-full"
                 >
                     {projects.map((project, index) => (
                         <motion.div
                             key={project.id}
                             variants={itemVariants}
-                            className="group h-full w-full max-w-xl md:max-w-none"
+                            className="group w-full md:w-[calc(50%-16px)] lg:w-[calc(33.333%-27px)] max-w-xl flex"
                         >
                             <ProjectCard 
                                 {...project}
@@ -215,16 +215,16 @@ export default function Projects() {
 
                 {/* Call to Action */}
                 <motion.div
-                    initial={{ opacity: 0, y: 50 }}
+                    initial={{ opacity: 0, y: 30 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ delay: 1.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-                    className="text-center mt-20 lg:mt-24"
+                    transition={{ delay: 0.6, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                    className="text-center mt-36 lg:mt-48 mb-20 lg:mb-28"
                 >
                     <motion.a
                         href="https://github.com/Nishita2309"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white hover:text-black transition-all duration-500 group"
+                        className="inline-flex items-center gap-3.5 px-10 py-5 rounded-full border border-teal-500/30 bg-teal-500/10 backdrop-blur-md text-white hover:bg-teal-500 hover:text-white hover:border-teal-400 shadow-[0_0_30px_-5px_rgba(45,212,191,0.2)] hover:shadow-[0_0_35px_0_rgba(45,212,191,0.4)] transition-all duration-500 group"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >

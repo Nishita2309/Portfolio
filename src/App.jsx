@@ -15,7 +15,7 @@ export default function App() {
 
       <Navbar />
 
-      <div className="flex flex-col gap-[40px]">
+      <div className="flex flex-col">
         <Hero />
         <About />
         <Projects />

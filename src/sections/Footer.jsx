@@ -65,7 +65,7 @@ export default function Footer() {
             external: true
         },
         {
-            href: 'mailto:nishita@example.com',
+            href: 'mailto:nishitapothana@gmail.com',
             label: 'Email',
             icon: (
                 <svg width="18" height="18" viewBox="0 0 16 16" fill="currentColor" aria-hidden>
